@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166BFD76764788B6439BE24F /* Pods_TodoMoviesSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E93D0316CD58BF638D4877C /* Pods_TodoMoviesSwift.framework */; };
 		E55E6CE92792248900932D89 /* TodoMoviesSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55E6CE82792248900932D89 /* TodoMoviesSwiftApp.swift */; };
 		E55E6CEB2792248900932D89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55E6CEA2792248900932D89 /* ContentView.swift */; };
 		E55E6CED2792248B00932D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55E6CEC2792248B00932D89 /* Assets.xcassets */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		109CAD6E1C4CC60DF99556F7 /* Pods-TodoMoviesSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMoviesSwift.debug.xcconfig"; path = "Target Support Files/Pods-TodoMoviesSwift/Pods-TodoMoviesSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		2E93D0316CD58BF638D4877C /* Pods_TodoMoviesSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoMoviesSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E14E8E48D3EBAF9A20ECAC /* Pods-TodoMoviesSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMoviesSwift.release.xcconfig"; path = "Target Support Files/Pods-TodoMoviesSwift/Pods-TodoMoviesSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E55E6CE52792248900932D89 /* TodoMoviesSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoMoviesSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55E6CE82792248900932D89 /* TodoMoviesSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMoviesSwiftApp.swift; sourceTree = "<group>"; };
 		E55E6CEA2792248900932D89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,17 +32,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166BFD76764788B6439BE24F /* Pods_TodoMoviesSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07427143517565D4D1A18374 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E93D0316CD58BF638D4877C /* Pods_TodoMoviesSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C8F72959A35FC0C8844B68D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				109CAD6E1C4CC60DF99556F7 /* Pods-TodoMoviesSwift.debug.xcconfig */,
+				47E14E8E48D3EBAF9A20ECAC /* Pods-TodoMoviesSwift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E55E6CDC2792248900932D89 = {
 			isa = PBXGroup;
 			children = (
 				E55E6CE72792248900932D89 /* TodoMoviesSwift */,
 				E55E6CE62792248900932D89 /* Products */,
+				4C8F72959A35FC0C8844B68D /* Pods */,
+				07427143517565D4D1A18374 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E55E6CF32792248B00932D89 /* Build configuration list for PBXNativeTarget "TodoMoviesSwift" */;
 			buildPhases = (
+				E1846D64B26F7C3E32E3A049 /* [CP] Check Pods Manifest.lock */,
 				E55E6CE12792248900932D89 /* Sources */,
 				E55E6CE22792248900932D89 /* Frameworks */,
 				E55E6CE32792248900932D89 /* Resources */,
+				9859727B4A1F51A362229064 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9859727B4A1F51A362229064 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodoMoviesSwift/Pods-TodoMoviesSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodoMoviesSwift/Pods-TodoMoviesSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoMoviesSwift/Pods-TodoMoviesSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1846D64B26F7C3E32E3A049 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodoMoviesSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E55E6CE12792248900932D89 /* Sources */ = {
@@ -275,6 +344,7 @@
 		};
 		E55E6CF42792248B00932D89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 109CAD6E1C4CC60DF99556F7 /* Pods-TodoMoviesSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -304,6 +374,7 @@
 		};
 		E55E6CF52792248B00932D89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47E14E8E48D3EBAF9A20ECAC /* Pods-TodoMoviesSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
