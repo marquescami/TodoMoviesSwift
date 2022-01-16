@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct MovieResponse: Decodable {
+struct Movie: Codable {
+    var name: String
+    var image: String
+    var numberOfLikes: Int
+    var popularity: Double
+    var similarMovies: [SimilarMovie] = []
     
-    let results: [Movie]
-}
-
-struct Movie: Decodable {
-        let id: Int
-        let title: String
-        let backdropPath: String?
-        let posterPath: String?
-        let overview: String
-        let voteAverage: Double
-        let voteCount: Int
-        let runtime: Int?
+    enum CodingKeys: String, CodingKey {
+        case name = "original_title"
+        case image = "poster_path"
+        case numberOfLikes = "vote_count"
+        case popularity
+    }
+    
 }
