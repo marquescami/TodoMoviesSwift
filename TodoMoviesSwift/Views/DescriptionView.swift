@@ -27,7 +27,7 @@ struct DescriptionView: View {
                     }
                     HStack {
                         Image(systemName: "heart.rectangle.fill")
-                        Text(String(format: "%.2lf", movieViewModel.movie.popularity))
+                        Text(String(format: "%.3lf", movieViewModel.movie.popularity))
                         Text("views")
                     }
                 }

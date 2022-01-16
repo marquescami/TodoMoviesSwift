@@ -28,11 +28,11 @@ struct SimilarDetailsView: View {
             Image(systemName: "").data(url: URL(string: "\(Request.imageURL)\(similarMovie.image)")!)
                 .resizable()
                 .scaledToFill()
-                .frame(maxWidth: 88, idealHeight: 120)
+                .frame(maxWidth: 44, idealHeight: 80)
                 .clipped()
             VStack(alignment: .leading, spacing: 4) {
                 Text(similarMovie.name)
-                    .font(.title3)
+                    .font(.body)
                     .bold()
                 HStack(spacing: 0) {
                     Text("\(movieViewModel.convertStringInDataFormatAndReturnYear(similarMovie))  -")
@@ -49,11 +49,10 @@ struct SimilarDetailsView: View {
                 .foregroundColor(.white.opacity(0.7))
             }.padding(.leading)
             Spacer()
-            Image(systemName: "checkmark.circle.fill")
+            Image(systemName: "checkmark.circle.fill")       .imageScale(.small)
                 .offset(y: -50)
         }
     }
-    
 }
 
 struct SimilarView_Previews: PreviewProvider {

@@ -22,9 +22,9 @@ struct Request {
         
         switch request {
         case .movieDetails:
-            AFRequest = AF.request("https://api.themoviedb.org/3/movie/1930?api_key=\(apiKey)&language=en-US&page=1rl")
+            AFRequest = AF.request("https://api.themoviedb.org/3/movie/624860?api_key=\(apiKey)&language=en-US&page=1rl")
         case .similarMovies:
-            AFRequest = AF.request("https://api.themoviedb.org/3/movie/1930/similar?api_key=\(apiKey)&language=en-US&page=1")
+            AFRequest = AF.request("https://api.themoviedb.org/3/movie/624860/similar?api_key=\(apiKey)&language=en-US&page=1")
         case .genresMovies:
             AFRequest = AF.request("https://api.themoviedb.org/3/genre/movie/list?api_key=\(apiKey)&language=en-US/genres")
         }

@@ -32,8 +32,13 @@ class MovieViewModel: ObservableObject {
         getSimilariesMovies.responseDecodable(of: SimilarMovieData.self) { response in
             
             guard let data = response.value else { return }
-            
-            for similarMovies in 0..<data.results.count {
+       
+            var quantitySimilarMovies = 5
+            if data.results.count<5{
+                quantitySimilarMovies = data.results.count
+            }
+                   
+            for similarMovies in 0..<quantitySimilarMovies {
                 self.movie.similarMovies.append(data.results[similarMovies])
                 
                 let map: [String] = data.results[similarMovies].genresIds.map { id -> String in
